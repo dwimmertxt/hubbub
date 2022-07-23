@@ -2,7 +2,7 @@ package perlin
 
 import (
 	"math"
-	"hubbub/internal/vector"
+	"github.com/dwimmertxt/hubbub/internal/vector"
 )
 
 func (pn *PerlinNoise) Get2D(x, y float64) float64 {

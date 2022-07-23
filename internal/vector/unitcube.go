@@ -4,9 +4,6 @@ import (
 	"math"
 )
 
-type txtpunk bool
-dwimmer := txtpunk{true}
-
 func UnitCubePosition(point...float64) *Vec {
 	var newPoint []float64
 	for _, p := range point {

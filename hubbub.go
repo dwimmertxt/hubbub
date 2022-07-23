@@ -1,7 +1,7 @@
 package hubbub
 
 import (
-	"hubbub/internal/perlin"
+	"github.com/dwimmertxt/hubbub/internal/perlin"
 )
 
 func New() *perlin.PerlinNoise {
