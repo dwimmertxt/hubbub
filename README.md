@@ -15,7 +15,7 @@ var (
     persistence float64 = 0.5
     octaves     float64 = 4
 )
-// initialise hubbub struct
+// initialise an instance of hubbub
 hb := hubbub.New()
 
 // get a Perlin noise value in range [0, 1]
