@@ -32,7 +32,7 @@ func (pn *PerlinNoise) Get2D(x, y float64) float64 {
 
 	res := lerp(lerp(dBL, dTL, v), lerp(dBR, dTR, v), u) 
 
-	return (res + 1) / 2
+	return (res + 1.0) / 2.0
 }
 
 func (pn *PerlinNoise) Octave2D(x, y, persistence float64, octaves int) float64 {
@@ -46,7 +46,7 @@ func (pn *PerlinNoise) Octave2D(x, y, persistence float64, octaves int) float64 
 		total += pn.Get2D(x * frequency, y * frequency) * amplitude
 		maxValue += amplitude
 		amplitude *= persistence
-		frequency *= 2
+		frequency *= 2.0
 	}
 	return total / maxValue
 }
