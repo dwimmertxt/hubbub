@@ -12,10 +12,10 @@ func (pn *PerlinNoise) Get2D(x, y float64) float64 {
 	xf 	:= x - math.Floor(x)
 	yf 	:= y - math.Floor(y)
 
-	tR 	:= vector.New(xf-1.0, yf-1.0)
-	tL	:= vector.New(xf, yf-1.0)
-	bR 	:= vector.New(xf-1.0, yf)
-	bL 	:= vector.New(xf, yf)
+	tR 	:= vector.New(1.0-xf, yf)
+	tL	:= vector.New(xf, yf)
+	bR 	:= vector.New(1.0-xf, 1.0-yf)
+	bL 	:= vector.New(xf, 1.0-yf)
 
 	pTR := pn.perm[pn.perm[X+1]+Y+1]
 	pTL := pn.perm[pn.perm[X]+Y+1]
